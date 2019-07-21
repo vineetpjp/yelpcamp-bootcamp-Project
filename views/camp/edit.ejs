@@ -1,0 +1,32 @@
+<%include ../partials/header%>
+
+<div class="container">
+    <div class="row" style="text-align:center;">
+        <h3>Edit <%=data.name%> camp here</h3>
+        <form action="/camp/<%=data._id%>?_method=PUT" method="POST" style="width:30%;margin:25px auto;" enctype="multipart/form-data">
+        
+            <div class="form-group">
+                <input type="text" name="camp[name]" value="<%=data.name%>" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="number" name="camp[price]" value="<%=data.price%>" class="form-control">
+            </div>
+            <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+            <div class="form-group">
+                <textarea name="camp[review]"  class="form-control" ><%=data.review%></textarea>
+            </div>
+            
+            <button class="btn btn-primary btn-block">Submit</button>
+            
+            <div style="margin-top:30px;"><a href="/camp">Go back</a></div>
+            
+        
+        </form>
+    </div>
+    
+</div>
+
+<%include ../partials/footer%>

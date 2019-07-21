@@ -1,0 +1,42 @@
+<%include ./partials/header.ejs%>
+<div class="container">
+   
+    <div class="row" style="text-align:center;">
+        
+            <form method="POST" action="/register" style="width:30%;margin:25px auto;">
+                <h1>Register here</h1>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <input type="username" placeholder="First name" name="firstName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="username" placeholder="Last Name" name="lastName" class="form-control">
+                    </div>
+                </div>    
+            
+                <div class="form-group" style="margin-top:15px;">
+                    <input type="username" placeholder="username" name="username" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" placeholder="password" name="password" class="form-control"> 
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Email (xyx@gmail.com)" name="email" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <input type="url" placeholder="Your avatar link" name="avatar" class="form-control">
+                </div>
+                 
+                 <div class="form-group">
+                    <input type="password" placeholder="SecretCode(optional for admins)" name="adminCode" class="form-control"> 
+                </div>
+                <button class="btn btn-primary">submit</button>
+                
+            </form> 
+    </div>
+    
+</div>
+<%include ./partials/footer%>

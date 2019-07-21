@@ -1,0 +1,60 @@
+
+<%include ../partials/header.ejs%>
+<div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Welcome to our campground</h1>
+                <p>Handpicked all over world</p>
+                <p><a class="btn btn-primary" href="/camp/new">Add new camp</a></p>
+            </div>
+        </header>
+        <%if(!noMatch){%>
+        <div>
+            <h3>Our most popular campground</h3>
+        </div>
+        <%}%>
+        
+        <div class="row text-center" style="display:flex;flex-wrap:wrap;">
+            
+            <%if(noMatch){%>
+            <div class="col-md-4 col-md-offset-4">
+                    
+                        <h3 ><%=noMatch%></h3>
+                    <div>
+                    <form action="/camp" method="GET">
+                       <div class="form-group" class="form-inline">
+                           <input type="text" name="search" placeholder="Campground search..." class="form-control">
+                           <input type="submit" value="Search" class="btn btn-default" style="margin-top:3px;">
+                       </div>
+                   </form>
+                    </div>
+            </div>
+            
+                
+            <%}%>
+            
+            
+            <% for(x of cdata){ %>
+        
+            <div class="col-md-4 col-sm-6">
+                
+                <div class="thumbnail">
+                       <img src="<%=x["image"] %>" > </img>
+                  
+                    <div class="caption">
+                        <h4><%=x.name %></h4>
+                        <a href="/camp/<%= x._id %>" class="btn btn-primary">more</a>
+                    </div>
+               </div> 
+            </div>
+        
+        
+            <%}%> 
+        </div>
+        
+        
+        
+</div>
+        
+        
+<%include ../partials/footer.ejs%>

@@ -1,0 +1,29 @@
+.thumbnail a > img, .thumbnail > img{
+    width: 100%;
+    padding: 0;
+}
+
+.thumbnail{
+    padding: 0;
+}
+.thumbnail .caption-full{
+    padding: 4px;
+}
+.fa, .fas {
+
+    padding: 0.1em;
+    font-size: 17px;
+}
+.dis{
+    display: inline;
+}
+
+#map{
+    height: 400px;
+    width: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

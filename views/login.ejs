@@ -1,0 +1,23 @@
+<%include ./partials/header.ejs%>
+<div class="container">
+   
+    <div class="row" style="text-align:center;">
+        <h1>Login here</h1>
+        <form method="POST" action="/login" style="width:30%;margin:25px auto;">
+        <div class="form-group">
+            <input type="username" placeholder="username" name="username" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <input type="password" placeholder="password" name="password" class="form-control"> 
+        </div>
+           
+        <button class="btn btn-primary">submit</button>
+        
+    </form> 
+    </div>
+    
+</div>
+
+
+<%include ./partials/footer.ejs%>

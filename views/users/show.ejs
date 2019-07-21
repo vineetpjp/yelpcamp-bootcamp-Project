@@ -1,0 +1,38 @@
+
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+            <div class=thumbnail>
+                <img src="<%=user.avatar%>" class="img-responsive ">
+                <div class="caption-full" id="cap">
+                    <a href="mailto:<%=user.email%>"><%=user.email%></a>
+                    <h3 style="text-align:center;"><a><%=user.firstName%></a></h3>
+                    <h4>All posts</h4>
+                    <ul>
+                        
+                        <%for(x of camp){%>
+                            <li><a href="/camp/<%=x.id%>"><%=x.name%></a></li>
+                    
+                    <%}%>
+                        
+                    </ul>
+                    
+                    
+            </div>
+            
+        </div>
+        
+        
+        
+    
+        
+    </div>    
+    
+    
+    
+</div>
+
+
+
+<% include ../partials/footer %>
